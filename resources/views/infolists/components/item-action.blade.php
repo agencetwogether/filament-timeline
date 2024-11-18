@@ -1,0 +1,19 @@
+@if($isGrouped())
+    <x-filament-actions::group
+        :actions="$getActions()"
+        :label="$getGroupLabel()"
+        :icon="$getGroupIcon()"
+        :iconPosition="$getGroupIconPosition()"
+        :color="$getGroupColor()"
+        :size="$getGroupSize()"
+        :tooltip="$getGroupTooltip()"
+        :dropdown-placement="$getGroupDropdownPlacement()"
+        :button="$isTriggerGroupButton()"
+        :link="$isTriggerGroupLink()"
+        :iconButton="$isTriggerGroupIconButton()"
+        :badge="$isTriggerGroupBadge()"
+        :outlined="$isGroupOutlined()"
+    />
+@else
+    <x-filament-actions::actions :actions="$getActions()"/>
+@endif
